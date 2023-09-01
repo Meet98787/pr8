@@ -1,0 +1,18 @@
+.container{
+max-width:1320px;
+margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    width: 100%;
+    padding: 0px 5px;
+    border: 2px solid black;
+    text-align: center;
+}
+.col-4{
+    width: 33%;
+   padding: 0px 10px;
+}
