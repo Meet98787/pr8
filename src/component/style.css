@@ -1,18 +1,35 @@
-.container{
-max-width:1320px;
-margin: auto;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
-.row{
+
+.container {
+    max-width: 1320px;
+    margin: auto;
+}
+
+.row {
     display: flex;
     flex-wrap: wrap;
 }
-.card{
+
+.card {
     width: 100%;
-    padding: 0px 5px;
-    border: 2px solid black;
     text-align: center;
+    padding: 0px 10px;
 }
-.col-4{
-    width: 33%;
-   padding: 0px 10px;
+
+.col-4 {
+    width: 25%;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.card img {
+    width: 80%;
+    padding: 10px 10px;
+    height: 300px;
 }
