@@ -14,6 +14,8 @@ import Slider from './bootstap/Slider';
 import Footer from './bootstap/Footer';
 import Contact from './bootstap/Contact';
 import Gallery from './bootstap/Gallery';
+import Reservation from './bootstap/Reservation';
+import Menu from './bootstap/Menu';
 
 
 
@@ -28,8 +30,10 @@ function App() {
     <Hero/>
     <About/>
     <Services/>
+    <Menu/>
     <ListGroup/>
     <Slider/>
+    <Reservation/>
     <Gallery/>
     <Contact/>
     <Footer/>              
