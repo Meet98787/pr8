@@ -2,7 +2,7 @@ import React from 'react'
 
 function ListGroup() {
   return (
-    <section class="list-gp ptb-40 bg-secondary" id="special">
+    <section class="list-gp ptb-40 bg-primary" id="special">
         <div class="container">
             <div class="title">
                 <h6 class="subtitle text-uppercase position-relative d-inline-block">SPECIALS</h6>

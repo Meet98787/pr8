@@ -18,6 +18,8 @@ import Reservation from './bootstap/Reservation';
 import Menu from './bootstap/Menu';
 import ProductCard from './component/test/ProductCard';
 import ProductSearch from './component/test/ProductSearch';
+import Testimonials from './bootstap/Testimonials';
+import Chefs from './bootstap/Chefs';
 
 
 
@@ -59,32 +61,31 @@ function App() {
   return (
     // fot bootstap project
 
-    
-    // <div>
 
-    // {/* <Topbar/>
-    // <Header/>
-    // <Hero/>
-    // <About/>
-    // <Services/>
-    // <Menu/>
-    // <ListGroup/>
-    // <Slider/>
-    // <Reservation/>
-    // <Gallery/>
-    // <Contact/>
-    // <Footer/>               */}
-    // {/* <ProductCard/> */}
-    
-    // {/* <ProductCard products = {products}/> */}
-    // {/* <FunctionFilter/> */}
-    // </div>
+    <div>
+
+    <Topbar/>
+    <Header/>
+    <Hero/>
+    <About/>
+    <Services/>
+    <Menu/>
+    {/* <ListGroup/> */}
+    <Slider/>
+    <Reservation/>
+    <Testimonials/>
+    <Gallery/>
+    <Chefs/>
+    <Contact/>
+    <Footer/>              
+
+    </div>
 
 
 
 
       // for test
-    <ProductSearch products = {products}/>
+    // <ProductSearch products = {products}/>
 
   )
 

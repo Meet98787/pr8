@@ -2,7 +2,7 @@ import React from 'react'
 
 function Reservation() {
     return (
-        <section id="book-a-table" class="ptb-60 bg-secondary">
+        <section id="book-a-table" class="ptb-60 bg-primary">
             <div class="container aos-init aos-animate" data-aos="fade-up">
 
                 <div class="container">
@@ -15,7 +15,7 @@ function Reservation() {
                 <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                     <div class="row">
                         <div class="col-lg-4 col-md-6 form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <input type="text" name="name" class="form-control " id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                             <div class="validate"></div>
                         </div>
                         <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">

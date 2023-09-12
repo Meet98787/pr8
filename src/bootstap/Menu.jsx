@@ -10,52 +10,52 @@ function Menu() {
         name: "Bread Barrel",
         price: "$6.95",
         dic:"Lorem, deren, trataro, filede, nerada",
-        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg"
+        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/bread-barrel.jpg"
     }, {
         name: "Bread Barrel",
         price: "$7.95",
         dic:"A delicate crab cake served on a toasted roll with lettuce and tartar sauce",
-        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg"
+        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/cake.jpg"
     },
     {
         name: "Caesar Selections",
         price: "$8.95",
         dic:"Lorem, deren, trataro, filede, nerada",
-        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg"
+        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/caesar.jpg"
     },
     {
         name: "Tuscan Grilled",
         price: "$9.95",
         dic:"Grilled chicken with provolone, artichoke hearts, and roasted red pesto",
-        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg"
+        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/tuscan-grilled.jpg"
     },
     {
         name: "Mozzarella Stick",
         price: "$4.95",
         dic:"Lorem, deren, trataro, filede, nerada",
-        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg"
+        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/mozzarella.jpg"
     },{
         name: "Greek Salad",
         price: "$9.95",
         dic:"Fresh spinach, crisp romaine, tomatoes, and Greek olives",
-        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg"
+        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/greek-salad.jpg"
     },
     {
         name: "Spinach Salad",
         price: "$9.95",
         dic:"Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette",
-        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg"
+        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/spinach-salad.jpg"
     },{
         name: "Lobster Roll",
         price: "$12.95",
         dic:"Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll",
-        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg"
+        img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-roll.jpg"
     }
     ])
     const newArr = product.map(getFull);
     function getFull(item) {
         return (
-            <div className="col-6 row my-4">
+            <div className="col-6 row my-3">
                     <div className="col-2">
                     <img src={item.img} alt="" className='menu-img' />
                     </div>

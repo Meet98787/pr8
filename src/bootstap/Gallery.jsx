@@ -1,56 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Gallery() {
+    const [gallery, setgallery] = useState([{
+        img:"https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-1.jpg"
+    }, 
+    {
+        img:"https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-2.jpg"
+    }, 
+    {
+        img:"https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-3.jpg"
+    }, 
+    {
+        img:"https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-4.jpg"
+    }, 
+    {
+        img:"https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-5.jpg"
+    }, 
+    {
+        img:"https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-6.jpg"
+    }, 
+    {
+        img:"https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-7.jpg"
+    }, 
+    {
+        img:"https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-8.jpg"
+    }
+
+    ])
+    const gallerys = gallery.map(imgs);
+    function imgs(galler) {
+        return (
+            
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+                    <a type="button" class="open" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <img src={galler.img} alt="" srcset="" width="100%"/>
+                        
+                    </a>
+                </div>
+        )
+    }
   return (
-    <section class="gallery ptb-60 bg-secondary" id="gallery">
+    <section class="gallery ptb-60 bg-primary" id="gallery">
         <div class="container">
             <div class="title">
                 <h6 class="subtitle text-uppercase position-relative d-inline-block">GALLERY</h6>
-                <h2 class="mb-5 text-warning">Some photos from Our Restaurant</h2>
+                <h2 class="mb-5 text-warning">Some Photos from Our Restaurant</h2>
             </div>
         </div>
         <div class="container-fluid">
             <div class="row px-2">
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-                    <a type="button" class="open" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-1.jpg" width="100%" />
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-                    <a type="button" class="open" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-2.jpg" width="100%" />
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-                    <a type="button" class="open" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-3.jpg" width="100%" />
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-                    <a type="button" class="open" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-4.jpg" width="100%" />
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-                    <a type="button" class="open" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-5.jpg" width="100%" />
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-                    <a type="button" class="open" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-6.jpg" width="100%" />
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-                    <a type="button" class="open" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-7.jpg" width="100%" />
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 p-1">
-                    <a type="button" class="open" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/gallery/gallery-8.jpg" width="100%" />
-                    </a>
-                </div>
+            {gallerys}
             </div>
             <div class="modal fade" id="staticBackdrop">
                 <div class="text-end">
