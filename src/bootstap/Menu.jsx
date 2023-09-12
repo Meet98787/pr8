@@ -52,6 +52,24 @@ function Menu() {
         img: "https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg"
     }
     ])
+    const newArr = product.map(getFull);
+    function getFull(item) {
+        return (
+            <div className="col-6 row my-4">
+                    <div className="col-2">
+                    <img src={item.img} alt="" className='menu-img' />
+                    </div>
+                    <div className="col-10 ">
+                        <div className="d-flex justify-content-between align-items-center"><h4 className='menu-h'>{item.name} </h4>
+                        <p className="dot"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+                        <h5 className='text-warning'>{item.price}</h5>
+                        </div>
+                        <p className='menu-dic'>{item.dic}</p>
+                        
+                    </div>
+                </div>
+        )
+    }
     return (
         <section class="list-gp ptb-40 bg-secondary menu" id="MENU">
             <div class="container">
@@ -69,7 +87,8 @@ function Menu() {
                     </ul>
                 </div>
                 <div className="row col-12">
-                <div className="col-6 row my-4">
+                    {newArr}
+                {/* <div className="col-6 row my-4">
                     <div className="col-2">
                     <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg" alt="" className='menu-img' />
                     </div>
@@ -81,33 +100,8 @@ function Menu() {
                         <p className='menu-dic'>Lorem, deren, trataro, filede, nerada</p>
                         
                     </div>
-                </div>
-                <div className="col-6 row my-4">
-                    <div className="col-2">
-                    <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg" alt="" className='menu-img' />
-                    </div>
-                    <div className="col-10 ">
-                        <div className="d-flex justify-content-between align-items-center"><h4 className='menu-h'>Lobster Bisque </h4>
-                        <p className="dot"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
-                        <h5 className='text-warning'>$5.95</h5>
-                        </div>
-                        <p className='menu-dic'>Lorem, deren, trataro, filede, nerada</p>
-                        
-                    </div>
-                </div>
-                <div className="col-6 row my-4">
-                    <div className="col-2">
-                    <img src="https://bootstrapmade.com/demo/templates/Restaurantly/assets/img/menu/lobster-bisque.jpg" alt="" className='menu-img' />
-                    </div>
-                    <div className="col-10 ">
-                        <div className="d-flex justify-content-between align-items-center"><h4 className='menu-h'>Lobster Bisque </h4>
-                        <p className="dot"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
-                        <h5 className='text-warning'>$5.95</h5>
-                        </div>
-                        <p className='menu-dic'>Lorem, deren, trataro, filede, nerada</p>
-                        
-                    </div>
-                </div>
+                </div> */}
+
                 </div>
                 
             </div>
