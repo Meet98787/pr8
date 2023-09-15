@@ -20,7 +20,6 @@ import ProductCard from './component/test/ProductCard';
 import ProductSearch from './component/test/ProductSearch';
 import Testimonials from './bootstap/Testimonials';
 import Chefs from './bootstap/Chefs';
-import Pagination from './project4/Pagination';
 import ProductList from './project4/ProductList';
 
 
@@ -96,7 +95,7 @@ function App() {
     {/* <Pagination products = {products}/> */}
     {/* <ProductList/> */}
 
-    
+
     <ProductSearch/>
     </>
     
