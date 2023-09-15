@@ -20,6 +20,8 @@ import ProductCard from './component/test/ProductCard';
 import ProductSearch from './component/test/ProductSearch';
 import Testimonials from './bootstap/Testimonials';
 import Chefs from './bootstap/Chefs';
+import Pagination from './project4/Pagination';
+import ProductList from './project4/ProductList';
 
 
 
@@ -62,30 +64,42 @@ function App() {
     // fot bootstap project
 
 
-    <div>
+    // <div>
 
-    <Topbar/>
-    <Header/>
-    <Hero/>
-    <About/>
-    <Services/>
-    <Menu/>
-    {/* <ListGroup/> */}
-    <Slider/>
-    <Reservation/>
-    <Testimonials/>
-    <Gallery/>
-    <Chefs/>
-    <Contact/>
-    <Footer/>              
+    // <Topbar/>
+    // <Header/>
+    // <Hero/>
+    // <About/>
+    // <Services/>
+    // <Menu/>
+    // {/* <ListGroup/> */}
+    // <Slider/>
+    // <Reservation/>
+    // <Testimonials/>
+    // <Gallery/>
+    // <Chefs/>
+    // <Contact/>
+    // <Footer/>              
 
-    </div>
+    // </div>
 
 
 
 
       // for test
     // <ProductSearch products = {products}/>
+
+
+    // for pr4
+    <>
+    {/* <ProductSearch products = {products}/> */}
+    {/* <Pagination products = {products}/> */}
+    {/* <ProductList/> */}
+
+    
+    <ProductSearch/>
+    </>
+    
 
   )
 
