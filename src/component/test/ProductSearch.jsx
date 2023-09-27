@@ -6,20 +6,17 @@ import Product from '../../project4/Product';
 
 function ProductSearch() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(4); // Number of products per page
+  const [productsPerPage] = useState(4);
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
-    // Filter products based on the search term
     const filtered = products.filter((product) =>
       product.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     setFilteredProducts(filtered);
   }, [searchTerm]);
-
-  // Calculate the index range for the current page
   const startIndex = (currentPage - 1) * productsPerPage;
   const endIndex = startIndex + productsPerPage;
   const displayedProducts = filteredProducts.slice(startIndex, endIndex);
