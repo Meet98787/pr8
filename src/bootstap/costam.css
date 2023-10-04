@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -54,10 +54,10 @@
 
 .ptb-100 {
     padding: 100px 0;
-}
+} */
 
 /* ----------------------- scroll-top start ------------------------ */
-.scroll-top {
+/* .scroll-top {
     width: 45px;
     height: 45px;
     line-height: 40px;
@@ -78,12 +78,12 @@
 
 .scroll-top:hover i {
     color: #fff;
-}
+} */
 
 /* ----------------------- scroll-top end ------------------------ */
 
 /* ----------------------- header start ------------------------ */
-.top-header {
+/* .top-header {
     z-index: 2;
     transition: all .5s;
 }
@@ -116,12 +116,12 @@ nav {
 .btn-outline-warning:hover {
     border-color: rgb(var(--bs-warning-rgb));
     background-color: rgb(var(--bs-warning-rgb));
-}
+} */
 
 /* ----------------------- header end ------------------------ */
 
 /* ----------------------- hero start ------------------------ */
-.hero {
+/* .hero {
     background-image: url('./image/hero-bg.jpg');
     background-attachment: fixed;
     background-position: center;
@@ -170,12 +170,12 @@ nav {
         opacity: 0;
         scale: 1.4;
     }
-}
+} */
 
 /* ----------------------- hero end ------------------------ */
 
 /* ----------------------- about start ------------------------ */
-.about {
+/* .about {
     background-image: url('./image/about-bg.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -229,12 +229,12 @@ nav {
 
 .about-img:hover {
     scale: 1.05;
-}
+} */
 
 /* ----------------------- about end ------------------------ */
 
 /* ----------------------- slider start ------------------------ */
-.subtitle::after {
+/* .subtitle::after {
     content: "";
     width: 100px;
     height: 1px;
@@ -276,12 +276,12 @@ nav {
 
 .carousel-indicators .active {
     background-color: var(--bs-warning);
-}
+} */
 
 /* ----------------------- slider end ------------------------ */
 
 /* ----------------------- services start ------------------------ */
-.card {
+/* .card {
     background-color: #1a1814;
     transition: all .5s linear;
 }
@@ -294,11 +294,11 @@ nav {
     padding-top: 0.5rem !important;
     padding-bottom: 2.5rem !important;
     background-color: rgb(var(--bs-warning-rgb));
-}
+} */
 
 /* ----------------------- services end ------------------------ */
 /* ----------------------- menu start---------------------- */
-.menu ul li a {
+/* .menu ul li a {
     display: inline-block;
     padding: 8px 12px 10px 12px;
     font-size: 16px;
@@ -328,11 +328,11 @@ nav {
     font-size: 15px;
     font-style: italic;
     color: rgba(255, 255, 255, 0.5) !important;
-}
+} */
 
 /* ----------------------- menu end---------------------- */
 
-/* ----------------------- contact start ------------------------ */
+----------------------- contact start ------------------------
 input {
     background: transparent !important;
     border-color: #625b4b !important;
@@ -378,7 +378,7 @@ textarea:focus {
 }
 
 /* alert */
-.alert {
+/* .alert {
     transform: translateY(-100%);
     transition: all .4s;
 }
@@ -386,13 +386,13 @@ textarea:focus {
 .alerton {
     display: block;
     transform: translateY(0);
-}
+} */
 
 /* ----------------------- contact end ------------------------ */
 /* ------------------------ testimonail start ------------------ */
 
 /* ------------------------ testimonail end ------------------ */
-.testimonial-item p {
+/* .testimonial-item p {
     font-style: italic;
     margin: 0 15px 0 15px;
     padding: 20px 20px 60px 20px;
@@ -423,10 +423,10 @@ textarea:focus {
 .testimonial-item i {
     font-size: 36px;
     padding: 0px 5px;
-}
+} */
 
 /* ----------------------- gallery start ------------------------ */
-.modal {
+/* .modal {
     background-color: rgb(0, 0, 0, 0.6) !important;
 }
 
@@ -462,11 +462,11 @@ textarea:focus {
 
 .toast {
     z-index: 99;
-}
+} */
 
 /* ----------------------- gallery end ------------------------ */
 /* ------------------------- chefs start --------------------------- */
-
+/* 
 .employee {
     overflow: hidden;
 }
@@ -500,11 +500,11 @@ textarea:focus {
 
 .employee:hover .employee-details .employee-social-link ul {
     bottom: 45px;
-}
+} */
 
 
 /* ----------------------- progress start ------------------------ */
-.progress-1 {
+/* .progress-1 {
     animation: prog-1 1s linear forwards;
 }
 
@@ -558,12 +558,12 @@ textarea:focus {
     100% {
         width: 80%;
     }
-}
+} */
 
 /* ----------------------- progress end ------------------------ */
 
 /* ----------------------- list-group start ------------------------ */
-.list-group {
+/* .list-group {
     border-right: 2px solid rgb(var(--bs-warning-rgb));
 }
 
@@ -583,12 +583,12 @@ textarea:focus {
     border: none;
     background-color: rgb(var(--bs-warning-rgb));
     color: #1a1814;
-}
+} */
 
 /* ----------------------- list-group end ------------------------ */
 
 /* ----------------------- faq start ------------------------ */
-.accordion-button {
+/* .accordion-button {
     background-color: #a18046 !important;
     color: #fff;
     border-radius: 0 !important;
@@ -601,12 +601,12 @@ textarea:focus {
 .accordion-button:focus {
     box-shadow: none;
     color: #fff;
-}
+} */
 
 /* ----------------------- faq end ------------------------ */
 
 /* ----------------------- footer start ------------------------ */
-.top-footer {
+/* .top-footer {
     background-color: #0c0b09;
 }
 
@@ -643,12 +643,12 @@ textarea:focus {
 
 .bottom-footer {
     background-color: #000;
-}
+} */
 
 /* ----------------------- footer end ------------------------ */
 
 /* ----------------------- offcanvas start ------------------------ */
-.reserve {
+/* .reserve {
     position: fixed;
     top: 50%;
     left: -40px;
@@ -676,6 +676,34 @@ textarea:focus {
 .offcanvas textarea:focus {
     background-color: #28251f !important;
     height: 60px !important;
-}
+} */
 
 /* ----------------------- offcanvas end ------------------------ */
+
+/* * {
+  outline: 1px solid steelblue;
+} */
+/* General */
+.container{
+    width: 1320px;
+}
+  #review-form .input-group-addon {
+    min-width: 100px;
+  }
+  #review-form .btn {
+    min-width: 100px;
+  }
+  #review-form input[type="text"],
+  #review-form textarea {
+    width: 100%;
+  }
+  .bg-yellow{
+    color: yellow;
+  }
+  .left{
+    align-items: start;
+    border: 2px solid black;
+    background-color: #bab3a6;
+  }
+
+

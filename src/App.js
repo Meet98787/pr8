@@ -24,6 +24,8 @@ import ProductList from './project4/ProductList';
 import List from './component/List';
 import UserefExa from './component/UserefExa';
 import Timewatch from './component/Timewatch';
+import FormValid from './PR6/FormValid';
+import Comment from './PR6/Comment';
 
 
 
@@ -106,7 +108,11 @@ function App() {
     // <List/>
 
 
-    <Timewatch/>
+    // <Timewatch/>
+    // <FormValid/>
+  
+    // <Comment/>
+    <Comment/>
 
   )
 
