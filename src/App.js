@@ -26,6 +26,8 @@ import UserefExa from './component/UserefExa';
 import Timewatch from './component/Timewatch';
 import FormValid from './PR6/FormValid';
 import Comment from './PR6/Comment';
+import Curd from './component/test/PR7/Curd';
+import Curdpr from './component/PR7/Curdpr';
 
 
 
@@ -112,8 +114,9 @@ function App() {
     // <FormValid/>
   
     // <Comment/>
-    <Comment/>
-
+    // <Comment/>
+    // <Curd/>
+    <Curdpr/>
   )
 
 
