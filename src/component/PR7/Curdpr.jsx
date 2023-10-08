@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import states from './json.json'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Curdpr = () => {
     const initialInput = { name: '', email: '', password: '', confirmPassword: '', mobile: '', course: '', hobbies: '', gender: '', state: '', city: '', address: '' }
@@ -64,41 +65,41 @@ const Curdpr = () => {
     const validate = () => {
         const errors = {}
         if (input.name.length < 1) {
-            errors.name = 'please enter name'
+            errors.name = 'Please Enter Name'
         }
         if (input.email.length < 1) {
-            errors.email = 'please vaild email'
+            errors.email = 'Please Vaild Email'
         }
         if (input.password.length < 1) {
-            errors.password = 'please enter password'
+            errors.password = 'Please Enter Password'
         }
         if (input.confirmPassword.length < 1) {
-            errors.confirmPassword = 'please confirm your password'
+            errors.confirmPassword = 'Please Enter Confirm Password'
         } else if (input.confirmPassword !== input.password) {
-            errors.confirmPassword = 'confirm password must match with password'
+            errors.confirmPassword = 'Confirm Password Is Not match With Password'
         }
         if (input.mobile.length < 1) {
-            errors.mobile = 'please enter mobile'
+            errors.mobile = 'Please Enter Mobile'
         } else if (input.mobile.length !== 10) {
-            errors.mobile = 'mobile number must be 10 digit!'
+            errors.mobile = 'Mobile Number Not Correct'
         }
         if (input.course.length < 1) {
-            errors.course = 'please enter course'
+            errors.course = 'Please Enter Course'
         }
         if (input.gender.length < 1) {
-            errors.gender = 'select your gender'
+            errors.gender = 'Select Your Gender'
         }
         if (input.state.length < 1) {
-            errors.state = 'select your state'
+            errors.state = 'Select Your State'
         }
         if (input.city.length < 1) {
-            errors.city = 'select your city'
+            errors.city = 'Select Your City'
         }
         if (input.hobbies.length < 1) {
-            errors.hobbies = 'please enter hobbies'
+            errors.hobbies = 'Please Enter Hobbies'
         }
         if (input.address.length < 1) {
-            errors.address = 'please enter address'
+            errors.address = 'Please Enter Address'
         }
         return errors
     }
@@ -130,7 +131,7 @@ const Curdpr = () => {
     // drop down
     const DropDown = ({ name, input, handleOption, states }) => {
         return (
-            <select name={name} className='block w-full rounded-md border-0 py-1.5 px-3 text-g px-3ray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 capitalize' value={input} onChange={handleOption} disabled={states.length < 1 ? true : false}>
+            <select name={name} className='block w-full rounded-md border-0 py-1.5 px-3 ' value={input} onChange={handleOption} disabled={states.length < 1 ? true : false}>
                 <option value="">-- select {name} --</option>
                 {
                     states.map((state, i) => <option key={i} value={name === 'state' ? state.state : state}>{name === 'state' ? state[name] : state}</option>)
@@ -142,8 +143,8 @@ const Curdpr = () => {
     const Table = ({ data, handleEdit, handleDelete, isEdit }) => {
         return (
     
-            <div className="relative overflow-x-auto flex flex-wrap px-3">
-                <table className="table-fixed text-sm text-left whitespace-nowrap flex-1 text-center">
+            <div className=" flex flex-wrap px-3">
+                <table className="table">
                     <thead className="text-xs  uppercase border-b dark:border-gray-700 bg-indigo-500">
                         <tr>
                             <th scope="col" className="px-6 py-3 border-r border-gray-500">Name</th>
@@ -175,8 +176,8 @@ const Curdpr = () => {
                                 <td className="px-6 py-4 border-r border-gray-400">{e.hobbies}</td>
                                 <td className="px-6 py-4 border-r border-gray-400">{e.address}</td>
                                 <td className="px-6 py-4">
-                                    <button className='text-white bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded' onClick={() => handleEdit(i)}>Edit</button>
-                                    <button disabled={isEdit} className='text-white bg-red-600 hover:bg-red-700 disabled:opacity-75 disabled:cursor-not-allowed px-3 py-1 rounded ml-2' onClick={() => handleDelete(i)}>Delete</button>
+                                    <button className='text-white bg-warning px-3 py-1 rounded' onClick={() => handleEdit(i)}>Edit</button>
+                                    <button disabled={isEdit} className='text-white bg-danger px-3 py-1 rounded ml-2' onClick={() => handleDelete(i)}>Delete</button>
                                 </td>
                             </tr>
                         )}
@@ -191,20 +192,20 @@ const Curdpr = () => {
     return (
         <>
             <div className="container py-10">
-                <h1 className='text-2xl px-6 text-gray-800 border-b border-indigo-400 pb-3'>Registration Form</h1>
-                <div className="mb-10 sm:mx-auto sm:w-full px-5">
+                <h1>Registration Form</h1>
+                <div className="px-5">
                     <form className="" onSubmit={handleSubmit} action="#" method="POST">
-                        <div className='flex flex-wrap items-end space-y-6'>
+                        <div className='flex flex-wrap items-end'>
                             <div className='w-1/2 px-3'>
-                                <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">Name</label>
+                                <label htmlFor="name" >Name</label>
                                 <div className="mt-2">
-                                    <input id="name" name="name" type="text" autoComplete="name" className="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value={input.name} onChange={handleChange} />
+                                    <input id="name" name="name" type="text" autoComplete="name" value={input.name} onChange={handleChange} />
                                     <p className='text-red-400 text-sm'>{errors.name}</p>
                                 </div>
                             </div>
 
                             <div className='w-1/2 px-3'>
-                                <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+                                <label htmlFor="email" className="block">Email address</label>
                                 <div className="mt-2">
                                     <input id="email" name="email" type="email" autoComplete="email" className="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value={input.email} onChange={handleChange} />
                                     <p className='text-red-400 text-sm'>{errors.email}</p>
@@ -212,9 +213,9 @@ const Curdpr = () => {
                             </div>
 
                             <div className='w-1/2 px-3'>
-                                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                                <label htmlFor="password" className="block">Password</label>
                                 <div className="mt-2">
-                                    <input id="password" name="password" type="password" autoComplete="current-password" className="block w-full rounded-md border-0 py-1.5 px-3 text px-3-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value={input.password} onChange={handleChange} />
+                                    <input id="password" name="password" type="password" autoComplete="current-password" value={input.password} onChange={handleChange} />
                                     <p className='text-red-400 text-sm'>{errors.password}</p>
                                 </div>
                             </div>
@@ -222,7 +223,7 @@ const Curdpr = () => {
                             <div className='w-1/2 px-3'>
                                 <label htmlFor="confirmPassword" className="block text-sm font-medium leading-6 text-gray-900">Confirm Password</label>
                                 <div className="mt-2">
-                                    <input id="confirm-password" name="confirmPassword" type="password" className="block w-full rounded-md border-0 py-1.5 px-3 text-g px-3ray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value={input.confirmPassword} onChange={handleChange} />
+                                    <input id="confirm-password" name="confirmPassword" type="password" value={input.confirmPassword} onChange={handleChange} />
                                     <p className='text-red-400 text-sm'>{errors.confirmPassword}</p>
                                 </div>
                             </div>
@@ -230,7 +231,7 @@ const Curdpr = () => {
                             <div className='w-1/3 px-3'>
                                 <label htmlFor="mobile" className="block text-sm font-medium leading-6 text-gray-900">Mobile no.</label>
                                 <div className="mt-2">
-                                    <input id="mobile" name="mobile" type="number" className="block w-full rounded-md border-0 py-1.5 px-3 text-g px-3ray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value={input.mobile} onChange={handleChange} />
+                                    <input id="mobile" name="mobile" type="number" value={input.mobile} onChange={handleChange} />
                                     <p className='text-red-400 text-sm'>{errors.mobile}</p>
                                 </div>
                             </div>
@@ -238,7 +239,7 @@ const Curdpr = () => {
                             <div className='w-1/3 px-3'>
                                 <label htmlFor="course" className="block text-sm font-medium leading-6 text-gray-900">Course</label>
                                 <div className="mt-2">
-                                    <select name='course' className='block w-full rounded-md border-0 py-1.5 px-3 text-g px-3ray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6' value={input.course} onChange={handleChange} >
+                                    <select name='course' value={input.course} onChange={handleChange} >
                                         <option value="">--select course--</option>
                                         <option value="be">B.E</option>
                                         <option value="bcom">B.COM</option>
@@ -250,18 +251,18 @@ const Curdpr = () => {
                             </div>
 
                             <div className='w-1/3 px-3'>
-                                <label htmlFor="gender" className="block text-sm font-medium leading-6 text-gray-900">Gender</label>
+                                <label htmlFor="gender" >Gender</label>
                                 <div className="mt-2">
                                     Male
-                                    <input id="male" name="gender" value='male' type="radio" className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600 mx-3" onChange={handleChange} />
+                                    <input id="male" name="gender" value='male' type="radio" onChange={handleChange} />
                                     Female
-                                    <input id="female" name="gender" value='female' type="radio" className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600 mx-3" onChange={handleChange} />
+                                    <input id="female" name="gender" value='female' type="radio" onChange={handleChange} />
                                     <p className='text-red-400 text-sm'>{errors.gender}</p>
                                 </div>
                             </div>
 
                             <div className='w-1/3 px-3'>
-                                <label htmlFor="state" className="block text-sm font-medium leading-6 text-gray-900">State</label>
+                                <label htmlFor="state">State</label>
                                 <div className="mt-2">
                                     <DropDown input={input.state} handleOption={handleOption} states={states.states} name='state' />
                                     <p className='text-red-400 text-sm'>{errors.state}</p>
@@ -269,7 +270,7 @@ const Curdpr = () => {
                             </div>
 
                             <div className='w-1/3 px-3'>
-                                <label htmlFor="city" className="block text-sm font-medium leading-6 text-gray-900">City</label>
+                                <label htmlFor="city">City</label>
                                 <div className="mt-2">
                                     <DropDown input={input.city} handleOption={handleOption} name='city' states={cities} />
                                     <p className='text-red-400 text-sm'>{errors.city}</p>
@@ -277,7 +278,7 @@ const Curdpr = () => {
                             </div>
 
                             <div className='w-1/3 px-3'>
-                                <label htmlFor="hobbies" className="block text-sm font-medium leading-6 text-gray-900">Hobbies</label>
+                                <label htmlFor="hobbies">Hobbies</label>
                                 <div className="mt-2">
                                     <input id="hobbies" name="hobbies" type="text" autoComplete="hobbies" className="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value={input.hobbies} onChange={handleChange} />
                                     <p className='text-red-400 text-sm'>{errors.hobbies}</p>
@@ -285,7 +286,7 @@ const Curdpr = () => {
                             </div>
 
                             <div className="w-1/3 px-3">
-                                <label htmlFor="address" className="block text-sm font-medium leading-6 text-gray-900">Address</label>
+                                <label htmlFor="address">Address</label>
                                 <div className="mt-2">
                                     <textarea id="address" name="address" rows="2" className="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" value={input.address} onChange={handleChange}></textarea>
                                     <p className='text-red-400 text-sm'>{errors.address}</p>
@@ -293,9 +294,9 @@ const Curdpr = () => {
                             </div>
                         </div>
                         <div className='mt-6 px-3'>
-                            <button type="submit" className="rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">{isEdit ? 'Update' : 'Submit'}</button>
+                            <button type="submit" className='bg-primary border-primary me-2'>{isEdit ? 'Update' : 'Submit'}</button>
 
-                            <input type='reset' value={isEdit ? 'Cancel' : 'Reset'} onClick={resetFields} className="ml-3 cursor-pointer rounded-md bg-orange-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600" />
+                            <input type='reset' className='bg-info border-info' value={isEdit ? 'Cancel' : 'Reset'} onClick={resetFields}  />
                         </div>
                     </form>
                 </div>
