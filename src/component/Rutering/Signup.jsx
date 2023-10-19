@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Signup() {
-      // Signup
   const [input, setInput] = useState({});
   const [data, setData] = useState(() => {
     return JSON.parse(localStorage.getItem('User')) || [];
@@ -15,17 +14,16 @@ function Signup() {
   const isUserExists = (userID) => {
     return data.some(user => user.userID === userID);
   };
+
   const navigate = useNavigate();
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     if (isUserExists(input.userID)) {
       alert('User already exists. Please choose a different ID.');
     } else if (input.password === input.confirmpassword) {
-      setData([...data, input]);
+      await setData([...data, input]);
       navigate("/login");
-      
-    //   alert('Account created successfully!');
     } else {
       alert('Password and confirm password do not match. Please try again.');
     }
@@ -33,7 +31,7 @@ function Signup() {
 
   return (
     <div className='login'>
-<h1 className='text-center'>SignUp</h1>
+      <h1 className='text-center'>SignUp</h1>
       <form onSubmit={handleSignup}>
         <label htmlFor="">Id</label>
         <input type="text" name="userID" onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })} />
@@ -47,4 +45,4 @@ function Signup() {
   )
 }
 
-export default Signup
+export default Signup;
