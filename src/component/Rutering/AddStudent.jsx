@@ -33,23 +33,27 @@ const AddStudent = () => {
             isValid = false;
             errors.stclass = 'Please select a class';
         }
-        if (input.maths >= 101 || input.maths<0){
+        if (!input.gender || input.gender === 'Select Your Gender') {
+            isValid = false;
+            errors.gender = 'Please select Your Gender';
+        }
+        if (!input.maths ||input.maths >= 101 || input.maths<0){
             isValid = false;
             errors.maths = 'Please Enter Valid Mark';
         }
-        if (input.computer >= 101 || input.computer<0){
+        if (!input.computer ||input.computer >= 101 || input.computer<0){
             isValid = false;
             errors.computer = 'Please Enter Valid Mark';
         }
-        if (input.english >= 101 || input.english<0){
+        if (!input.english ||input.english >= 101 || input.english<0){
             isValid = false;
             errors.english = 'Please Enter Valid Mark';
         }
-        if (input.scince >= 101 || input.scince<0){
+        if (!input.scince ||input.scince >= 101 || input.scince<0){
             isValid = false;
             errors.scince = 'Please Enter Valid Mark';
         }
-        if(input.cnumber.length != 10){
+        if(!input.cnumber ||input.cnumber.length != 10){
             isValid = false;
             errors.cnumber = 'Please Enter Valid Number';
         }
@@ -73,6 +77,7 @@ const handleSubmit = (e) => {
     return (
         <div className="main">       
             <form id="registerForm" onSubmit={handleSubmit}>
+            <h1 class="text-center fw-bolder mt-3">Add Students</h1>
                 <div className="mb-2">
                     <label className="text-muted fs-4">Student name</label><br />
                     <input className="form-control p-2 fs-4" name="stname" type="text" onChange={handleChange} />
@@ -86,8 +91,15 @@ const handleSubmit = (e) => {
                         <option value="B">B</option>
                         <option value="C">C</option>
                         <option value="D">D</option>
+                        {errors.stclass && <div className="text-danger">{errors.stclass}</div>}
                     </select>
-                    {errors.stclass && <div className="text-danger">{errors.stclass}</div>}
+                    <label htmlFor="" className="text-muted fs-4">Gender</label><br />
+                    <input type="radio" name='gender' value="Male" onChange={handleChange}/>
+                    <label htmlFor="" className='p-2'> Male</label>
+                    <input type="radio" name='gender' value="Female" onChange={handleChange}/>
+                    <label htmlFor="" className='p-2'> Female</label>
+                    {errors.gender && <div className="text-danger">{errors.gender}</div>}
+                    
                 </div>
                 <div class="mb-2">
                         <label for="" class="text-muted fs-4">Date of Birth : </label>
@@ -126,6 +138,7 @@ const handleSubmit = (e) => {
                         <label for="" class="text-muted fs-4">Scince</label>
                         <input type="number" class="form-control p-2 fs-4" id="scince" onChange={handleChange} name="scince" />
                         {errors.scince && <div className="text-danger">{errors.scince}</div>}
+                        
                         <h4 id="mark-error" class="text-danger pt-2"></h4>
                     </div>
 

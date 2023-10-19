@@ -28,19 +28,23 @@ export default function EditStudent() {
       errorMessages.stclass = 'Please select a class';
       isValid = false;
     }
-    if (input.maths >= 101 || input.maths<0){
+    if (!input.gender || input.gender === 'Select Your Gender') {
+      isValid = false;
+      errorMessages.stclass = 'Please select Your Gender';
+  }
+    if (!input.maths ||input.maths >= 101 || input.maths<0){
       isValid = false;
       errorMessages.maths = 'Please Enter Valid Mark';
   }
-  if (input.computer >= 101 || input.computer<0){
+  if (!input.computer ||input.computer >= 101 || input.computer<0){
       isValid = false;
       errorMessages.computer = 'Please Enter Valid Mark';
   }
-  if (input.english >= 101 || input.english<0){
+  if (!input.english || input.english >= 101 || input.english<0){
       isValid = false;
       errorMessages.english = 'Please Enter Valid Mark';
   }
-  if (input.scince >= 101 || input.scince<0){
+  if (!input.scince || input.scince >= 101 || input.scince<0){
       isValid = false;
       errorMessages.scince = 'Please Enter Valid Mark';
   }
@@ -84,6 +88,12 @@ export default function EditStudent() {
               <option value="D">D</option>
             </select>
           </div><br />
+          <label htmlFor="" className="text-muted fs-4">Gender</label><br />
+                    <input type="radio" name='gender' value="Male" onChange={handleChange}/>
+                    <label htmlFor="" className='p-2'> Male</label>
+                    <input type="radio" name='gender' value="Female" onChange={handleChange}/>
+                    <label htmlFor="" className='p-2'> Female</label>
+                    {errors.gender && <div className="text-danger">{errors.gender}</div>}
           <div class="mb-2">
             <label for="" class="text-muted fs-4">Date of Birth : </label>
             <input type="date" class="fs-4 text-muted p-2 border-0" id="dob" onChange={handleChange} name="stdob" value={input ? input.stdob : ""} required/>
