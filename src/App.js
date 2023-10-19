@@ -7,7 +7,7 @@ import Topbar from './bootstap/Topbar';
 import Header from './bootstap/Header';
 import FunctionFilter from './component/FunctionFilter';
 import Hero from './bootstap/Hero';
-import About from './bootstap/About';
+// import About from './bootstap/About';
 import Services from './bootstap/Services';
 import ListGroup from './bootstap/ListGroup';
 import Slider from './bootstap/Slider';
@@ -28,6 +28,17 @@ import FormValid from './PR6/FormValid';
 import Comment from './PR6/Comment';
 import Curd from './component/test/PR7/Curd';
 import Curdpr from './component/PR7/Curdpr';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Nevbar from './component/Rutering/Nevbar';
+import Home from './component/Rutering/Home';
+import Students from './component/Rutering/Students';
+import StudentDetail from './component/Rutering/StudentDetail';
+import Page404 from './component/Rutering/Page404';
+import EditStudent from './component/Rutering/EditStudent';
+import AddStudent from './component/Rutering/AddStudent';
+import Login from './component/Rutering/Login';
+import Signup from './component/Rutering/Signup';
+import { useEffect, useState } from 'react';
 
 
 
@@ -66,7 +77,8 @@ function App() {
   }
     // Add more products here
   ];
-  
+  const [activeUser ,setActiveUser]=useState(true)
+
   return (
     // fot bootstap project
 
@@ -116,7 +128,23 @@ function App() {
     // <Comment/>
     // <Comment/>
     // <Curd/>
-    <Curdpr/>
+    // <Curdpr/>
+    <>
+    <BrowserRouter>
+    <Nevbar activeUser={activeUser}/>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/student" element={<Students/>}/>
+      <Route path="/student/edit/:id" element={<EditStudent/>}/>
+      <Route path="/student/view/:id" element={<StudentDetail/>}/>
+      <Route path="/student/addstudent" element={<AddStudent/>}/>
+      <Route path="/login" element={<Login activeUser={activeUser} setActiveUser={setActiveUser}/>}/>
+      <Route path="/signup" element={<Signup/>}/>
+
+      <Route path="*" element={<Page404/>}/>
+    </Routes>
+    </BrowserRouter>
+    </>
   )
 
 
