@@ -72,7 +72,7 @@ export default function Students() {
 
   return (
     <div class="list p-3">
-      <h1 class="text-center fw-bolder mt-3 border-bottom">Add Students</h1>
+      <h1 class="text-center fw-bolder mt-3 border-bottom">Students List</h1>
       <div className='filter text-center d-flex align-items-center justify-content-between m-3'>
       <Link className='btn btn-primary  me-2' to={`/student/addstudent`}>Add Student</Link>
       <input type="text" id="" placeholder='Search by Name...'  onChange={handleSearch} />
@@ -116,7 +116,7 @@ export default function Students() {
         </thead>
 
         <tbody id="user-data-list">
-          {student.length>0?
+          {student && student.length>0?
           student.map((st, key) => (
             <tr key={key}>
 
