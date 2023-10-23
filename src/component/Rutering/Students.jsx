@@ -31,6 +31,7 @@ export default function Students() {
       setStudent(NewList)
     }
   }
+  
   const handleSort = (e) => {
     const sortt = e.target.value
     
@@ -125,8 +126,8 @@ export default function Students() {
               <td class="fs-4 text-center">{st.stdob}</td>
               <td class="fs-4 text-center">{st.gender}</td>
               <td class="fs-4 text-center">{st.fname}</td>
-
               <td class="fs-4 text-center">{st.mname}</td>
+              {/* hjkjopl price name price hotal 1000 range set price <e className="target value">range = on input handal input h1 price sprice </h1></e>*/}
               <td class="fs-4 text-center">{st.cnumber}</td>
               <td class="fs-4 text-center">{st.address}</td>
               <td class="fs-4 text-center">{st.maths}</td>
