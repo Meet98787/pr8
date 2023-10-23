@@ -130,23 +130,23 @@ function App() {
     // <Comment/>
     // <Curd/>
     // <Curdpr/>
-    // <>
-    // <BrowserRouter>
-    // <Nevbar activeUser={activeUser}/>
-    // <Routes>
-    //   <Route path="/" element={<Home/>}/>
-    //   <Route path="/student" element={<Students/>}/>
-    //   <Route path="/student/edit/:id" element={<EditStudent/>}/>
-    //   <Route path="/student/view/:id" element={<StudentDetail/>}/>
-    //   <Route path="/student/addstudent" element={<AddStudent/>}/>
-    //   <Route path="/login" element={<Login activeUser={activeUser} setActiveUser={setActiveUser}/>}/>
-    //   <Route path="/signup" element={<Signup/>}/>
+    <>
+    <BrowserRouter>
+    <Nevbar activeUser={activeUser}/>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/student" element={<Students/>}/>
+      <Route path="/student/edit/:id" element={<EditStudent/>}/>
+      <Route path="/student/view/:id" element={<StudentDetail/>}/>
+      <Route path="/student/addstudent" element={<AddStudent/>}/>
+      <Route path="/login" element={<Login activeUser={activeUser} setActiveUser={setActiveUser}/>}/>
+      <Route path="/signup" element={<Signup/>}/>
 
-    //   <Route path="*" element={<Page404/>}/>
-    // </Routes>
-    // </BrowserRouter>
-    // </>
-    <Prectical/>
+      <Route path="*" element={<Page404/>}/>
+    </Routes>
+    </BrowserRouter>
+    </>
+    // <Prectical/>
   )
 
 
